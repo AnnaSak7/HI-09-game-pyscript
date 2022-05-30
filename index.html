@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env> - paths: - ./main.py </py-env>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="video-wrap">
+      <video
+        id="bg-video"
+        src="assets/mugenjo_02.mov"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <!-- <img src="images/jewellery.jpg" alt="Placeholder"> -->
+      </video>
+    </div>
+    <div class="container">
+      <div class="title"></div>
+
+      <div>
+        <py-script src="main.py"></py-script>
+      </div>
+      <!-- <div class="input">
+        <input
+          id="my-input-field"
+          class="input-filed border flex item-center mr-3 border-grey-300 p-2"
+          type="text"
+        />
+        <button
+          means="enter"
+          id="my-button"
+          class="p=2 text-white bg-blue-600 border border-blue-600"
+          type="submit"
+          pys-onClick="on_click"
+        >
+          入力
+        </button>
+      </div>
+      <div id="my-output"></div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

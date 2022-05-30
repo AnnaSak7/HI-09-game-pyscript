@@ -1,0 +1,55 @@
+body {
+  background-color: blueviolet;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#my-button {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: purple;
+}
+
+button:hover::after {
+  color: #fff;
+  content: "Enter";
+}
+
+.video-wrap {
+  position: relative;
+}
+
+#bg-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+}
+
+#my-output {
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 10px white;
+}
+
+.type {
+  color: #fff;
+}
