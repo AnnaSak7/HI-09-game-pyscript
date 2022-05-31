@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <py-env> - paths: - ./main.py </py-env>
+    <py-env> - paths: - ./main.py</py-env>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -19,15 +19,13 @@
         loop
         muted
         playsinline
-      >
-        <!-- <img src="images/jewellery.jpg" alt="Placeholder"> -->
-      </video>
+      ></video>
     </div>
     <div class="container">
-      <div class="title"></div>
-
+      <div class="part1"></div>
+      <div class="part2"></div>
       <div>
-        <py-script src="main.py"></py-script>
+        <py-script src="main.py"> </py-script>
       </div>
       <!-- <div class="input">
         <input
@@ -47,6 +45,13 @@
       </div>
       <div id="my-output"></div> -->
     </div>
+
+    <div class="image-container"></div>
+    <!-- <div class="py-box-container">
+      <py-box widths="1/3">
+        <py-repl class="py-repl"></py-repl>
+      </py-box>
+    </div> -->
     <script src="script.js"></script>
   </body>
 </html>
