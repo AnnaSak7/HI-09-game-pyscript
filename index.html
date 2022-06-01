@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <py-env> - paths: - ./main.py</py-env>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -22,8 +23,12 @@
       ></video>
     </div>
     <div class="container">
+      <py-title class="text-8xl text-cyan-500">無限城</py-title>
+      <!-- <py-button class="bg-emerald-500">button</py-button> -->
+      <!-- <py-inputbox></py-inputbox> -->
+
       <div class="part1"></div>
-      <div class="part2"></div>
+      <!-- <div class="part2"></div> -->
       <div>
         <py-script src="main.py"> </py-script>
       </div>
@@ -46,7 +51,18 @@
       <div id="my-output"></div> -->
     </div>
 
-    <div class="image-container"></div>
+    <div class="nums_enter">
+      <div class="image-container"></div>
+      <div class="enter">
+        <button id="nyuryokuBtn" onclick="password()">
+          <img
+            src="./assets/enter.png"
+            alt="enter"
+            style="width: 200px; height: 500px"
+          />
+        </button>
+      </div>
+    </div>
     <!-- <div class="py-box-container">
       <py-box widths="1/3">
         <py-repl class="py-repl"></py-repl>
