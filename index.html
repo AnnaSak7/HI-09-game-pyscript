@@ -9,7 +9,7 @@
     <py-env> - paths: - ./python/main.py</py-env>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Challenge 1</title>
   </head>
   <body>
     <div class="video-wrap">
@@ -22,29 +22,26 @@
         playsinline
       ></video>
     </div>
-    <div>
+  
       <div class="container"></div>
-      <div>
-        <py-script src="./python/main.py"> </py-script>
-      </div>
       <div class="nums_enter">
         <div class="image-container"></div>
         <button id="nyuryokuBtn" onclick="password()">
           <img
-            src="./assets/enter.png"
-            alt="enter"
-            style="width: 200px; height: 500px"
+          src="./assets/enter.png"
+          alt="enter"
+          style="width: 150px; height: 350px"
           />
         </button>
-        `;
       </div>
-
+      
       <!-- <div class="py-box-container">
         <py-box widths="1/3">
           <py-repl class="py-repl"></py-repl>
         </py-box>
       </div> -->
     </div>
+    <py-script src="./python/main.py"> </py-script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
