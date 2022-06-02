@@ -57,7 +57,7 @@ const kanjiNumbers = () => {
         id="${shuffledArray[i] + 1}"
         style="width: 200px; height: 200px"
         class="grid-img"
-        src="./assets/0${shuffledArray[i]}.png"
+        src="../assets/0${shuffledArray[i]}.png"
         alt="${shuffledArray[i] + 1}"
         />
         </button>
@@ -168,7 +168,7 @@ const password = () => {
     num6clicked === false &&
     num8clicked === false
   ) {
-    window.location.href = "/shinobi.html";
+    window.location.href = "../pages/shinobi.html";
   }
 };
 

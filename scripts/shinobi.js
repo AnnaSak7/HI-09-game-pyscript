@@ -9,7 +9,7 @@ const secondChallengeInit = () => {
       </div>
       <div id="unknown-letters"></div>
       <div id='key'></div>
-      <py-script src="hangman.py"></py-script>
+      <py-script src="../python/hangman.py"></py-script>
     `;
 };
 
