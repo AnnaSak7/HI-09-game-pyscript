@@ -1,11 +1,11 @@
-const container1 = document.querySelector(".part1");
-const container2 = document.querySelector(".part2");
+const container = document.querySelector(".container");
 const imageContainer = document.querySelector(".image-container");
+const enter = document.querySelector(".enter");
 
-const createFirstChallengePart1 = () => {
-  container1.innerHTML += `
-        
-        <p>You landed into this mysterious Mugen castle. In order to get out of here to chase after the villain, you need a code.</p>
+const createFirstChallenge = () => {
+  container.innerHTML += `
+  <py-title class="text-8xl text-cyan-500">無限城</py-title>
+        <p>You landed into this mysterious Mugen castle which has tons of ninja passages. In order to open one of the doors to get out of this secret chamber, you need a code.</p>
         <p>BUT everything seems in Japanese. Figure out the numbers, then press the right buttons.</p>
         
         <div class="input">
@@ -28,6 +28,22 @@ const createFirstChallengePart1 = () => {
     
         `;
 };
+
+function shuffleArray(array) {
+  let curId = array.length;
+  // There remain elements to shuffle
+  while (0 !== curId) {
+    // Pick a remaining element
+    let randId = Math.floor(Math.random() * curId);
+    curId -= 1;
+    // Swap it with the current element.
+    let tmp = array[curId];
+    array[curId] = array[randId];
+    array[randId] = tmp;
+  }
+  return array;
+}
+
 const kanjiNumbers = () => {
   let shuffledArray = shuffleArray(imgNumbers);
 
@@ -58,21 +74,6 @@ function getRndInteger(min, max) {
 }
 
 let imgNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
-function shuffleArray(array) {
-  let curId = array.length;
-  // There remain elements to shuffle
-  while (0 !== curId) {
-    // Pick a remaining element
-    let randId = Math.floor(Math.random() * curId);
-    curId -= 1;
-    // Swap it with the current element.
-    let tmp = array[curId];
-    array[curId] = array[randId];
-    array[randId] = tmp;
-  }
-  return array;
-}
 
 let num1clicked = false;
 let num2clicked = false;
@@ -171,6 +172,6 @@ const password = () => {
   }
 };
 
-createFirstChallengePart1();
-// createFirstChallengePart2();
+createFirstChallenge();
+
 kanjiNumbers();

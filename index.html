@@ -22,38 +22,13 @@
         playsinline
       ></video>
     </div>
-    <div class="container">
-      <py-title class="text-8xl text-cyan-500">無限城</py-title>
-      <!-- <py-button class="bg-emerald-500">button</py-button> -->
-      <!-- <py-inputbox></py-inputbox> -->
-
-      <div class="part1"></div>
-      <!-- <div class="part2"></div> -->
+    <div>
+      <div class="container"></div>
       <div>
         <py-script src="main.py"> </py-script>
       </div>
-      <!-- <div class="input">
-        <input
-          id="my-input-field"
-          class="input-filed border flex item-center mr-3 border-grey-300 p-2"
-          type="text"
-        />
-        <button
-          means="enter"
-          id="my-button"
-          class="p=2 text-white bg-blue-600 border border-blue-600"
-          type="submit"
-          pys-onClick="on_click"
-        >
-          入力
-        </button>
-      </div>
-      <div id="my-output"></div> -->
-    </div>
-
-    <div class="nums_enter">
-      <div class="image-container"></div>
-      <div class="enter">
+      <div class="nums_enter">
+        <div class="image-container"></div>
         <button id="nyuryokuBtn" onclick="password()">
           <img
             src="./assets/enter.png"
@@ -61,13 +36,15 @@
             style="width: 200px; height: 500px"
           />
         </button>
+        `;
       </div>
+
+      <!-- <div class="py-box-container">
+        <py-box widths="1/3">
+          <py-repl class="py-repl"></py-repl>
+        </py-box>
+      </div> -->
     </div>
-    <!-- <div class="py-box-container">
-      <py-box widths="1/3">
-        <py-repl class="py-repl"></py-repl>
-      </py-box>
-    </div> -->
     <script src="script.js"></script>
   </body>
 </html>

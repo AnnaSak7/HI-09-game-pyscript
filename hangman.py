@@ -1,7 +1,6 @@
+from mimetypes import guess_all_extensions
 import random
-import os
-from pkgutil import iter_modules
-from telnetlib import LOGOUT
+
 # from ascii_hangman import stages, logo
 
 words = ['sakura', 'kiku', 'ran', 'botan']
@@ -11,33 +10,40 @@ words = ['sakura', 'kiku', 'ran', 'botan']
 chosen_word = words[random.randint(0, 3)]
 
 
+display = []
+for x in range(len(chosen_word)):
+    display += '_'
+
 pyscript.write('msg', f'Guess a letter {chosen_word}')
 
+pyscript.write('unknown-letters', f"{' '.join(display)}")
 
 letter_input = Element('letter_input')
 
 def on_click_letter(*args, **kwargs):
     input_value = letter_input.element.value
     pyscript.write('response', f"guessed letter is {input_value}")
+    for index in range(len(chosen_word)):
+        if chosen_word[index] == input_value:
+            display[index] = input_value
+    pyscript.write('unknown-letters', f"{' '.join(display)}")
 
-# display = []
-# for x in range(len(chosen_word)):
-#     display += '_'
+            
 
-# print(f"{' '.join(display)}")
-
-# lives = 6
 # end_of_game = False
 # guessed_letters = []
 
 # while not end_of_game:
-#     guess = input('Guess a letter: ').lower()
+#     guess = letter_input.element.value
     
-#     #clearing the input
-#     os.system("clear") 
-    
+#     if guess in chosen_word:
+#         for index in range(len(chosen_word)):
+#             if chosen_word[index] == guess:
+#                 display[index] = guess
+        # pyscript.write('unknown-letters', f"{' '.join(display)}")
+
 #     if guess in display:
-#             print("You have already guessed this letter.")
+#            print("You have already guessed this letter.")
 #     elif guess in chosen_word:
 #         for index in range(len(chosen_word)):
 #             if chosen_word[index] == guess:

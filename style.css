@@ -71,10 +71,6 @@ input {
   background-color: #ffffff8c;
 }
 
-.part2 {
-  display: flex;
-}
-
 .numberIsBox {
   width: auto;
   height: auto;
@@ -111,4 +107,9 @@ input {
   filter: grayscale(100%);
   /* transform: scale(0.85);
   box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25); */
+}
+
+#unknown-letters {
+  font-size: 20rem;
+  color: aquamarine;
 }
