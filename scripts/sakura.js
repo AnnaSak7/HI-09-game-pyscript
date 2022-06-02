@@ -1,6 +1,6 @@
 const thirdChallenge = document.querySelector(".third-challenge");
-const choBtn = document.querySelector("#cho");
-const hanBtn = document.querySelector("#han");
+// const choBtn = document.getElementById("cho");
+// const hanBtn = document.getElementById("han");
 
 const thirdChallengeInit = () => {
   thirdChallenge.innerHTML += `
@@ -18,20 +18,13 @@ const thirdChallengeInit = () => {
         </div>
     `;
 
-  choBtn.addEventListener(
-    "click",
-    (e) => {
-      btn.classList.toggle("pushed");
-    },
-    true
-  );
-  hanBtn.addEventListener(
-    "click",
-    (e) => {
-      btn.classList.toggle("pushed");
-    },
-    true
-  );
+  document.getElementById("cho").addEventListener("click", btnPressed);
+  document.getElementById("han").addEventListener("click", btnPressed);
+};
+
+const btnPressed = (e) => {
+  console.log("btn pressed");
+  e.target.classList.toggle("pushed");
 };
 
 thirdChallengeInit();
