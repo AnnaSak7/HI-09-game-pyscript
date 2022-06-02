@@ -13,8 +13,4 @@ const secondChallengeInit = () => {
     `;
 };
 
-// if (!guessedWord.includes("_")) {
-//   alert("hey you did it!");
-// }
-
 secondChallengeInit();
