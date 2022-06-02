@@ -110,6 +110,29 @@ input {
 }
 
 #unknown-letters {
-  font-size: 20rem;
+  font-size: 18rem;
   color: aquamarine;
+}
+
+#input-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#letter_input {
+  padding: 10px;
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+  border-radius: 10px;
+}
+
+#guess_letter_btn {
+  width: 5rem;
+  height: 5rem;
+  background-color: cadetblue;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 20px;
 }
