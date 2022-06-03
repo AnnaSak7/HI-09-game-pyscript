@@ -217,6 +217,14 @@ input {
   height: 50%;
 }
 
+#modal-content {
+  position: fixed;
+  left: 38%;
+  top: 15%;
+  color: #000;
+  font-size: 25rem;
+}
+
 /* The Close Button */
 .close {
   color: rgb(48, 45, 45);
