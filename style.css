@@ -138,9 +138,9 @@ input {
 
 #letter_input {
   padding: 10px;
-  width: 5rem;
+  width: 12rem;
   height: 5rem;
-  font-size: 5rem;
+  font-size: 1.5rem;
   border-radius: 10px;
 }
 
@@ -218,9 +218,6 @@ input {
 }
 
 #modal-content {
-  position: fixed;
-  left: 38%;
-  top: 15%;
   color: #000;
   font-size: 25rem;
 }
