@@ -31,7 +31,8 @@ def on_click_letter(*args, **kwargs):
     correct = ''.join(display)
     if correct == chosen_word:
         print('you did it')
-        pyscript.write('key', "You did it! Change shinobi.html to sakura.html in the url.")
+        pyscript.write('hint', "")
+        pyscript.write('key', "You did it! Click HERE!")
 
     
     

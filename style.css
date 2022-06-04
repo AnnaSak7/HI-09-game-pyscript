@@ -144,6 +144,18 @@ input {
   border-radius: 10px;
 }
 
+#hint {
+  font-size: 3rem;
+}
+
+#key {
+  font-size: 5rem;
+}
+
+#key:hover {
+  cursor: pointer;
+}
+
 .sakura {
   background-color: #000;
   background-image: url("./assets/chohan.jpg");
