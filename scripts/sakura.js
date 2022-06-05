@@ -17,11 +17,13 @@ const thirdChallengeInit = () => {
             <button class='chohanBtns' id="han" pys-onClick="on_click_chohan">半</button>
         </div>
 
-        <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id='modal-content'></div>
+        <div id='modal' class='modal'>
+            <div class='modal-content'>
+                <span class='close' onclick=''>&times;</span>
+             <div id='result'></div>
+            </div>
         </div>
+        <div id='audio'></div>
     `;
 
   document.getElementById("cho").addEventListener("click", btnPressed);
@@ -30,11 +32,9 @@ const thirdChallengeInit = () => {
 
 const btnPressed = (e) => {
   e.target.classList.toggle("pushed");
-  document.getElementById("modal").style.display = "block";
-
-  document.getElementById("modal-content").innerHTML == "半"
-    ? document.getElementById("soundHan").play()
-    : document.getElementById("soundCho").play();
+  setTimeout(function () {
+    document.getElementById("modal").style.display = "block";
+  }, 5000);
 };
 
 thirdChallengeInit();
@@ -44,4 +44,8 @@ document.querySelector(".close").onclick = () => {
   document.getElementById("cho").classList.contains("pushed")
     ? document.getElementById("cho").classList.toggle("pushed")
     : document.getElementById("han").classList.toggle("pushed");
+
+  if (document.querySelector(".chohanImg")) {
+    document.querySelector(".chohanImg").remove();
+  }
 };

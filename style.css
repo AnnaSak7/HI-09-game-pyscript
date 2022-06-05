@@ -255,11 +255,14 @@ input {
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #modal-content {
   color: #000;
-  font-size: 25rem;
+  font-size: 15rem;
 }
 
 /* The Close Button */
