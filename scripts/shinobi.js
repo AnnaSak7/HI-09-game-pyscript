@@ -17,4 +17,5 @@ const secondChallengeInit = () => {
     window.location.href = "../pages/sakura.html";
   });
 };
+
 secondChallengeInit();
