@@ -8,7 +8,7 @@ kanji = ['桜','菊','牡丹', '椿', '藤', '梅']
 
 hints = ['Cherry blossom', 'Chrysanthemum', 'Paeonia suffruticosa', 'Camellia', 'Wisteria floribunda', 'Plum blossom']
 
-index = random.randint(0, 3)
+index = random.randint(0, 5)
 chosen_word = words[index]
 
 display = []
@@ -26,13 +26,12 @@ def on_click_letter(*args, **kwargs):
         if chosen_word[index] == input_value.lower():
             display[index] = input_value.lower()
     pyscript.write('unknown-letters', f"{' '.join(display)}")
-    # pyscript.write('key', f"{chosen_word} & {' '.join(display)}You did it! Change shinobi.html to sakura.html in the url.")
     letter_input.element.value = ""
     
     correct = ''.join(display)
     if correct == chosen_word:
         pyscript.write('hint', "")
-        pyscript.write('key', f"<div class='modal-hana'><div class='modal-hana-content'><p>{kanji[words.index(chosen_word)]}</p><p id='modal-hana-content'>You did it! Click <strong style='color: orange'>HERE!</strong></p></div>")
+        pyscript.write('key', f"<div class='modal-hana'><div class='modal-content'><div style='font-size: 8rem'>{kanji[words.index(chosen_word)]}</div><div>You did it! Click <strong style='color: orange'>HERE!</strong></div></div></div>")
 
 
     
