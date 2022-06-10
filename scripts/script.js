@@ -179,7 +179,7 @@ const password = () => {
     num6clicked === false &&
     num8clicked === false
   ) {
-    window.location.href = "/team3-time-machine/Anna/pages/shinobi.html";
+    window.location.href = "/pages/shinobi.html";
   }
 };
 

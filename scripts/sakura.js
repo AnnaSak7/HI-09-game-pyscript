@@ -43,5 +43,5 @@ const playagain = () => {
 };
 
 const toFinalPage = () => {
-  window.location.href = "/Anna/pages/final.html";
+  window.location.href = "/pages/final.html";
 };
