@@ -1,30 +1,45 @@
 const container = document.querySelector(".container");
 const imageContainer = document.querySelector(".image-container");
 const enter = document.querySelector(".enter");
+const introVideo = document.getElementById("warp-overlay");
 
 const firstChallengeInit = () => {
+  setTimeout(function () {
+    document.getElementById("intro-video").innerHTML = `
+    <video
+ 
+    class="bg-video"
+    src="assets/Mugen-jo.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+    `;
+    document.getElementById("warp-overlay").remove();
+  }, 6000);
   container.innerHTML += `
-        <img src='./assets/makimono01.png' alt='challenge 1 instruction'/>
-        <div class="input">
-        <input
-          id="number-input-field"
-          class="input-field"
-          type="text"
-        />
-        <button
-          means="enter"
-          id="enter-button"
-          class='enter-button'
-          type="submit"
-          pys-onClick="on_click_number"
-        >
-          入力
-        </button>
-        <div class='numberIsBox' id="number-output"></div>
-      </div>
-    
+        <img src='./assets/makimono01.png' alt="challenge 1 instruction"/>
+          <div class="input">
+          <input
+            id="number-input-field"
+            class="input-field"
+            type="text"
+            placeholder='type a number'
+          />
+          <button
+            means="enter"
+            id="enter-button"
+            class='enter-button'
+            type="submit"
+            pys-onClick="on_click_number"
+          >入力</button>
+          <div class='numberIsBox' id="number-output"></div>
+        </div>
         `;
 };
+
+firstChallengeInit();
 
 function shuffleArray(array) {
   let curId = array.length;
@@ -54,7 +69,7 @@ const kanjiNumbers = () => {
         id="${shuffledArray[i] + 1}"
         style="width: 150px; height: 150px"
         class="grid-img"
-        src="../assets/0${shuffledArray[i]}.png"
+        src="./assets/0${shuffledArray[i]}.png"
         alt="${shuffledArray[i] + 1}"
         />
         </button>
@@ -164,10 +179,8 @@ const password = () => {
     num6clicked === false &&
     num8clicked === false
   ) {
-    window.location.href = "../pages/shinobi.html";
+    window.location.href = "/team3-time-machine/Anna/pages/shinobi.html";
   }
 };
-
-firstChallengeInit();
 
 kanjiNumbers();

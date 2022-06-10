@@ -1,15 +1,13 @@
 const thirdChallenge = document.querySelector(".third-challenge");
-const modal = document.getElementById("modal");
-const span = document.querySelector(".close");
 
 const thirdChallengeInit = () => {
   thirdChallenge.innerHTML += `
         <img src="../assets/makimono03.png" alt="challenge 3 instruction"/>
 
         <div class='tobaku'>
-            <p>よろしゅうござんすか？　入ります。</p>
-            <p>さぁ、張った張った！！</p>
-            <p>Click 丁 or 半</p>
+            <p>よろしゅうござんすか？　入ります。- Ready? Here we go.</p>
+            <p>さぁ、張った張った！！ - What's it going to be? Bet! </p>
+          
         </div>
 
         <div class="cho-han-btns-container">
@@ -28,7 +26,6 @@ const thirdChallengeInit = () => {
   document.getElementById("cho").addEventListener("click", btnPressed);
   document.getElementById("han").addEventListener("click", btnPressed);
 };
-
 const btnPressed = (e) => {
   e.target.classList.toggle("pushed");
   setTimeout(function () {
@@ -43,4 +40,8 @@ const playagain = () => {
   document.getElementById("cho").classList.contains("pushed")
     ? document.getElementById("cho").classList.toggle("pushed")
     : document.getElementById("han").classList.toggle("pushed");
+};
+
+const toFinalPage = () => {
+  window.location.href = "/Anna/pages/final.html";
 };

@@ -18,16 +18,18 @@ input {
   color: #000;
 }
 
-.title {
+#warp-overlay {
+  display: block;
   width: 100vw;
-  height: 20vh;
+  height: 100vh;
 }
 
 .input-field {
   border-radius: 10px;
-  width: 5rem;
+  width: 12rem;
   height: 5rem;
-  font-size: 5rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
 }
 
 .enter-button {
@@ -49,7 +51,7 @@ input {
   position: relative;
 }
 
-#bg-video {
+.bg-video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -121,6 +123,8 @@ input {
 }
 .active {
   filter: grayscale(100%);
+  /* transform: scale(0.85);
+  box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25); */
 }
 
 #unknown-letters {
@@ -154,19 +158,6 @@ input {
   cursor: pointer;
 }
 
-.modal-hana {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-}
-
 .sakura {
   background-color: #000;
   background-image: url("./assets/chohan.jpg");
@@ -186,6 +177,7 @@ input {
   width: 10rem;
   height: 10rem;
   font-size: 5rem;
+  font-family: "Yuji Mai", serif;
   border: 0 solid #135a5d;
   border-radius: 50%;
   padding: 0;
@@ -194,7 +186,7 @@ input {
     #b0dfe1 0%,
     #1f969a 60%
   );
-  font-family: Arial;
+
   white-space: nowrap;
   box-shadow: 0px 20px #135a5d, -10px 30px 10px rgba(139, 138, 138, 0.25);
   cursor: pointer;
@@ -215,26 +207,52 @@ input {
 .tobaku {
   position: fixed;
   bottom: 5rem;
+  font-family: "Tapestry", cursive;
+}
+
+.modal-hana {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+  font-family: "Tapestry", cursive;
+}
+
+/* Modal Content/Box */
+.modal-hana-content {
+  background-color: #fefefe81;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 50%;
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
+  font-family: "Tapestry", cursive;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe81;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 30px;
+  padding: 20px;
   border-radius: 30px;
   width: 50%; /* Could be more or less, depending on screen size */
   height: 50%;
@@ -244,9 +262,14 @@ input {
   align-items: center;
 }
 
+#modal-content {
+  color: #000;
+  font-size: 15rem;
+}
+
 /* The Close Button */
 .close {
-  color: rgb(48, 45, 45);
+  color: rgb(0, 0, 0);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -254,7 +277,85 @@ input {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(42, 23, 23);
+  opacity: 0.7;
   text-decoration: none;
   cursor: pointer;
+}
+
+.final-body {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/timetraveler.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.final-final-body {
+  background-color: #000;
+}
+.final-final-body .itsyou-div {
+  width: 60vw;
+  height: 25vh;
+  position: fixed;
+  bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.final video {
+  position: fixed;
+  z-index: 0;
+  top: 20%;
+  left: 35%;
+}
+
+.p-thirdChallenge {
+  font-size: 1.5rem;
+}
+
+#msg-box {
+  width: 60vw;
+  height: 20vh;
+  position: fixed;
+  top: 0;
+
+  background-color: #0000009f;
+  border-radius: 30px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.itsyou-div {
+  width: 60vw;
+  height: 25vh;
+  position: fixed;
+  bottom: 0;
+  border-radius: 30px;
+  /* background-color: #0000009f; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 5rem;
+}
+
+.itsyou-div p {
+  font-size: 4rem;
+  color: rgb(130, 12, 44);
 }
